@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Band name Generator</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <div class="Container">
+      <div class="main">
+        <% if (locals.generatedName) {%>
+           <h1><%= generatedName %>🥵</h1> 
+        <%} else {%>   
+        <h1>Welcome to the BandName Generator👍</h1>
+        <%}%>
+        <form action="/generate" method="POST">
+          <input class="btn" type="submit  " value="Generate Name" name="generatedName"/>
+        </form>
+      </div>
+      <%- include("partials/footer")%>
+    </div>
+   
+  </body>
+</html>

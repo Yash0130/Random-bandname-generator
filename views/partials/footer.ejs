@@ -1,0 +1,10 @@
+<footer>
+  <p class="copy">copy right &copy; 
+    <% if (String(year).length == 3) {%>
+    <%= "20" + String(year).slice(1)%>
+     <%} else {%>
+      <%= "19" + String(year)%>
+     <%}%>
+  </p>
+
+</footer> 
